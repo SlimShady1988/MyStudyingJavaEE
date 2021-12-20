@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ee</groupId>
+    <artifactId>javaee</artifactId>
+    <version>1</version>
+    <name>javaee</name>
+    <packaging>war</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <junit.version>5.8.2</junit.version>
+    </properties>
+    <dependencies>
+
+        <!--###########################     JavaEE/Jakarta      #####################-->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>9.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>jakarta.json</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp</groupId>
+            <artifactId>jakarta.servlet.jsp-api</artifactId>
+            <version>3.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.servlet.jsp.jstl</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
+        <!--###########################     JavaEE/Jakarta      #####################-->
+
+
+
+        <!--###########################     SOAP / REST     ############-->
+        <dependency>
+            <groupId>jakarta.xml.ws</groupId>
+            <artifactId>jakarta.xml.ws-api</artifactId>
+            <version>4.0.0-RC1</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.ws.rs</groupId>
+            <artifactId>jakarta.ws.rs-api</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.xml.ws</groupId>
+            <artifactId>rt</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <!-- ЩОСЬ НЕ ПРАЦЮЄ -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.inject</groupId>
+            <artifactId>jersey-hk2</artifactId>
+            <version>3.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
+        <!--###########################     SOAP /REST    ############-->
+
+
+
+        <!--###########################     Thymeleaf       #####################-->
+        <dependency>
+            <groupId>org.thymeleaf</groupId>
+            <artifactId>thymeleaf</artifactId>
+            <version>3.0.13.RELEASE</version>
+        </dependency>
+
+        <!--###########################     HIBERNATE      #####################-->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core-jakarta</artifactId>
+            <version>5.6.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>7.0.1.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.25</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!--###########################     JUNIT      #####################-->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+
+
+
+
+        <!--###########################     OpenWebBeans      #####################-->
+<!--                <dependency>-->
+        <!--            <groupId>org.apache.geronimo.specs</groupId>-->
+        <!--            <artifactId>geronimo-interceptor_1.1_spec</artifactId>-->
+        <!--            <version>1.0</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.geronimo.specs</groupId>-->
+        <!--            <artifactId>geronimo-servlet_3.0_spec</artifactId>-->
+        <!--            <version>1.0</version>-->
+        <!--            <scope>provided</scope>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.geronimo.specs</groupId>-->
+        <!--            <artifactId>geronimo-jcdi_1.0_spec</artifactId>-->
+        <!--            <scope>provided</scope>-->
+        <!--            <version>1.1</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.geronimo.specs</groupId>-->
+        <!--            <artifactId>geronimo-atinject_1.0_spec</artifactId>-->
+        <!--            <scope>provided</scope>-->
+        <!--            <version>1.2</version>-->
+        <!--        </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.apache.openwebbeans</groupId>-->
+<!--                    <artifactId>openwebbeans-impl</artifactId>-->
+<!--                    <version>2.0.23</version>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.apache.openwebbeans</groupId>-->
+<!--                    <artifactId>openwebbeans-web</artifactId>-->
+<!--                    <version>2.0.23</version>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.apache.openwebbeans</groupId>-->
+<!--                    <artifactId>openwebbeans-spi</artifactId>-->
+<!--                    <version>2.0.23</version>-->
+<!--                    <scope>provided</scope>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.apache.openwebbeans</groupId>-->
+<!--                    <artifactId>openwebbeans-ee-common</artifactId>-->
+<!--                    <version>2.0.23</version>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.apache.openwebbeans</groupId>-->
+<!--                    <artifactId>openwebbeans-resource</artifactId>-->
+<!--                    <version>2.0.23</version>-->
+<!--                </dependency>-->
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
