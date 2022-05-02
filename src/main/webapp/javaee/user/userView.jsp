@@ -1,4 +1,4 @@
-<%@ page import="servlets.javaEE.ClientBundle.model.beans.User" %><%--
+<%@ page import="com.ee.user.model.User" %><%--
   Created by IntelliJ IDEA.
   User: SlimShady
   Date: 01.10.2021
@@ -15,7 +15,7 @@
         <p> User NAME from PASTED JAVA CODE is  <%= ((User)request.getAttribute("User")).getName() %> </p>
         <p> User AGE from PASTED JAVA CODE is  <%= ((User)request.getSession().getAttribute("User")).getAge() %> </p>
         AND
-        <jsp:useBean id="User" class="servlets.javaEE.ClientBundle.model.beans.User" scope="request"/>
+        <jsp:useBean id="User" class="com.ee.user.model.User" scope="request"/>
 
         <p> User Name from PASTED BEAN is  <jsp:getProperty name="User" property="name"/> </p>
         AND
